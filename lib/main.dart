@@ -1,22 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:u_store_ecommerce_app/utils/theme/theme.dart';
+import 'app.dart';
+
 
 void main() {
-  runApp(const MyApp());
+
+  /// Todo: Add widgets Binding
+  /// Todo: Init Local Storage
+  /// Todo: Await Native Splash
+  /// Todo: Initialize Firebase
+  /// Todo: Initialize Authentication
+  runApp(const App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      themeMode:ThemeMode.system,
-      theme: UAppTheme.lightTheme,
-      darkTheme: UAppTheme.darkTheme,
-    );
-  }
-}
 
