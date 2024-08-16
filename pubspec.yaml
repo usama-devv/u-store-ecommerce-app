@@ -50,9 +50,18 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/images/animations/
+    - assets/images/banners/
+    - assets/images/content/
     - assets/images/onboarding/
+    - assets/images/products/
+    - assets/images/reviews/
     - assets/logos/
+    - assets/logos/social_logo/
     - assets/icons/
+    - assets/icons/brands/
+    - assets/icons/categories/
+    - assets/icons/payment_methods/
 
 
   #-------------------local fonts----------------#

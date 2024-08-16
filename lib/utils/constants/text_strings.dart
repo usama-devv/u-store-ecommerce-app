@@ -23,12 +23,13 @@ class UTextStrings{
   static const String userName = "User Name";
   static const String phoneNo = "Phone Number";
   static const String rememberMe = "Remember Me";
-  static const String forgotPassword = "Forgot Password";
+  static const String forgetPassword = "Forget Password";
   static const String signIn = "Sign In";
   static const String createAccount = "Create Account";
   static const String orSignInWith = "Or Sign in With";
   static const String orSignUpWith = "Or Sign up With";
   static const String iAgreeTo = "I agree to";
+  static const String and = "and";
   static const String privacyPolicy = "Privacy Policy";
   static const String termsOfUse = "Terms of use";
   static const String verificationCode = "Verification Code";
@@ -48,6 +49,9 @@ class UTextStrings{
   static const String emailNotReceivedMessage = "Didn't get the email? Check your junk/spam or resend it.";
   static const String yourAccountCreatedTitle = "Your account successfully created!";
   static const String yourAccountCreatedSubTitle = "Welcome to your Ultimate Shopping Destination: Your account is created, Unleash the joy of Seamless Online Shopping.";
+  static const String uContinue = "Continue";
+  static const String submit = "Submit";
+  static const String done = "Done";
 
 
   /// Home Texts
