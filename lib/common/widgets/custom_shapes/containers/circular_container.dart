@@ -10,11 +10,13 @@ class UCircularContainer extends StatelessWidget {
     this.padding = 0,
     this.child,
     this.backgroundColor = UColors.white,
+    this.margin,
   });
   final double? height;
   final double? width;
   final double radius;
   final double padding;
+  final EdgeInsets? margin;
   final Widget? child;
   final Color backgroundColor;
 
@@ -23,6 +25,7 @@ class UCircularContainer extends StatelessWidget {
     return Container(
       height: height,
       width: width,
+      margin: margin,
       padding: EdgeInsets.all(padding),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(radius),
