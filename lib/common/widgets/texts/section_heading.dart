@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:u_store/utils/constants/sizes.dart';
 
 class USectionHeading extends StatelessWidget {
   const USectionHeading({
@@ -17,6 +18,7 @@ class USectionHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(title,
             style: Theme.of(context)

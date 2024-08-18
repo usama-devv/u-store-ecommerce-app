@@ -4,10 +4,10 @@ import 'package:u_store/utils/constants/colors.dart';
 
 class UCartCounterIcon extends StatelessWidget {
   const UCartCounterIcon({
-    super.key, required this.onPressed, required this.iconColor,
+    super.key, required this.onPressed, this.iconColor,
   });
   final VoidCallback onPressed;
-  final Color iconColor;
+  final Color? iconColor;
 
   @override
   Widget build(BuildContext context) {
