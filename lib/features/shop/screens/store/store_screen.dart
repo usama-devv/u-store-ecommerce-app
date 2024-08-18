@@ -18,105 +18,123 @@ class StoreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: UAppBar(
-        title: Text('Store', style: Theme.of(context).textTheme.headlineMedium),
-        actions: [
-          UCartCounterIcon(onPressed: () {}),
-        ],
-      ),
-      body: NestedScrollView(
-          headerSliverBuilder: (_, innerBoxIsScrolled) {
-            return [
-              SliverAppBar(
-                pinned: true,
-                floating: true,
-                backgroundColor: UHelperFunctions.isDarkMode(context)
-                    ? UColors.black
-                    : UColors.white,
-                expandedHeight: 440,
-                automaticallyImplyLeading: false,
-                flexibleSpace: Padding(
-                  padding: const EdgeInsets.all(USizes.defaultSpace),
-                  child: ListView(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    children: [
-                      /// Search Bar
-                      const SizedBox(height: USizes.spaceBtwItems),
-                      const USearchContainer(
-                        text: 'Search in Store',
-                        showBorder: true,
-                        showBackground: false,
-                        padding: EdgeInsets.zero,
-                      ),
-                      const SizedBox(height: USizes.spaceBtwSections),
+    return DefaultTabController(
+      length: 5,
+      child: Scaffold(
+        appBar: UAppBar(
+          title: Text('Store', style: Theme.of(context).textTheme.headlineMedium),
+          actions: [
+            UCartCounterIcon(onPressed: () {}),
+          ],
+        ),
+        body: NestedScrollView(
+            headerSliverBuilder: (_, innerBoxIsScrolled) {
+              return [
+                SliverAppBar(
+                  pinned: true,
+                  floating: true,
+                  backgroundColor: UHelperFunctions.isDarkMode(context)
+                      ? UColors.black
+                      : UColors.white,
+                  expandedHeight: 440,
+                  automaticallyImplyLeading: false,
+                  flexibleSpace: Padding(
+                    padding: const EdgeInsets.all(USizes.defaultSpace),
+                    child: ListView(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      children: [
+                        /// Search Bar
+                        const SizedBox(height: USizes.spaceBtwItems),
+                        const USearchContainer(
+                          text: 'Search in Store',
+                          showBorder: true,
+                          showBackground: false,
+                          padding: EdgeInsets.zero,
+                        ),
+                        const SizedBox(height: USizes.spaceBtwSections),
 
-                      /// Featured Brands
-                      USectionHeading(
-                          title: 'Featured Brand', onPressed: () {}),
-                      const SizedBox(height: USizes.spaceBtwItems / 1.5),
+                        /// Featured Brands
+                        USectionHeading(
+                            title: 'Featured Brand', onPressed: () {}),
+                        const SizedBox(height: USizes.spaceBtwItems / 1.5),
 
-                      UGridLayout(
-                        itemCount: 4,
-                        mainAxisExtent: 80,
-                        itemBuilder: (_, index) {
-                          return GestureDetector(
-                            onTap: () {},
-                            child: URoundedContainer(
-                              padding: const EdgeInsets.all(USizes.sm),
-                              showBorder: true,
-                              backgroundColor: Colors.transparent,
-                              child: Row(
-                                children: [
-                                  /// Icon
-                                  Flexible(
-                                    child: UCircularImage(
-                                      isNetworkImage: false,
-                                      image: UImages.iconCloth,
-                                      backgroundColor: Colors.transparent,
-                                      overlayColor:
-                                          UHelperFunctions.isDarkMode(context)
-                                              ? UColors.white
-                                              : UColors.black,
+                        UGridLayout(
+                          itemCount: 4,
+                          mainAxisExtent: 80,
+                          itemBuilder: (_, index) {
+                            return GestureDetector(
+                              onTap: () {},
+                              child: URoundedContainer(
+                                padding: const EdgeInsets.all(USizes.sm),
+                                showBorder: true,
+                                backgroundColor: Colors.transparent,
+                                child: Row(
+                                  children: [
+                                    /// Icon
+                                    Flexible(
+                                      child: UCircularImage(
+                                        isNetworkImage: false,
+                                        image: UImages.iconCloth,
+                                        backgroundColor: Colors.transparent,
+                                        overlayColor:
+                                            UHelperFunctions.isDarkMode(context)
+                                                ? UColors.white
+                                                : UColors.black,
+                                      ),
                                     ),
-                                  ),
-                                  const SizedBox(
-                                      width: USizes.spaceBtwItems / 2),
+                                    const SizedBox(
+                                        width: USizes.spaceBtwItems / 2),
 
-                                  /// Text
-                                  Expanded(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        const UBrandTitleWithVerificationIcon(
-                                            title: 'Acer',
-                                            brandTextSize: TextSizes.large),
-                                        Text(
-                                          '256 Products',
-                                          overflow: TextOverflow.ellipsis,
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .labelMedium,
-                                        ),
-                                      ],
+                                    /// Text
+                                    Expanded(
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          const UBrandTitleWithVerificationIcon(
+                                              title: 'Acer',
+                                              brandTextSize: TextSizes.large),
+                                          Text(
+                                            '256 Products',
+                                            overflow: TextOverflow.ellipsis,
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .labelMedium,
+                                          ),
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                          );
-                        },
-                      ),
+                            );
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  /// Tab Bar
+                  bottom: TabBar(
+                    isScrollable: true,
+                    indicatorColor: UColors.primary,
+                    unselectedLabelColor: UColors.darkGrey,
+                    labelColor: UHelperFunctions.isDarkMode(context) ? UColors.white : UColors.primary,
+                    tabs: const [
+                      Tab(child: Text('Sports')),
+                      Tab(child: Text('Furniture')),
+                      Tab(child: Text('Electronics')),
+                      Tab(child: Text('Clothes')),
+                      Tab(child: Text('Cosmetics')),
                     ],
                   ),
                 ),
-              ),
-            ];
-          },
-          body: Container()),
+              ];
+            },
+            body: Container()),
+      ),
     );
   }
 }
