@@ -57,6 +57,7 @@ flutter:
     - assets/images/onboarding/
     - assets/images/products/
     - assets/images/reviews/
+    - assets/images/user/
     - assets/logos/
     - assets/logos/social_logo/
     - assets/icons/

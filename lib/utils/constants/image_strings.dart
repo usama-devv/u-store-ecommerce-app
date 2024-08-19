@@ -125,4 +125,7 @@ class UImages{
   static const String productImage78 = "assets/images/products/tshirt_green_collar.png";
   static const String productImage79 = "assets/images/products/tshirt_red_collar.png";
   static const String productImage80 = "assets/images/products/tshirt_yellow_collar.png";
+
+  /// Profile
+  static const String user = "assets/images/user/user.png";
 }
