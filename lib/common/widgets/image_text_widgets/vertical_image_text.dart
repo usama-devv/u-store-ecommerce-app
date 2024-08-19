@@ -9,7 +9,7 @@ class UVerticalImageText extends StatelessWidget {
     required this.image,
     required this.title,
     this.textColor = UColors.white,
-    this.backgroundColor = UColors.white,
+    this.backgroundColor,
     this.onTap,
   });
   final String image, title;
