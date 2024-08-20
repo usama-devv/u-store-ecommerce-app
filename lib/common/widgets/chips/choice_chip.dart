@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:u_store/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:u_store/utils/constants/colors.dart';
+import 'package:u_store/utils/helpers/helper_functions.dart';
 
 class UChoiceChip extends StatelessWidget {
   const UChoiceChip({
@@ -15,11 +17,24 @@ class UChoiceChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isColor = UHelperFunctions.getColor(text) != null;
     return ChoiceChip(
-      label: Text(text),
+      label: isColor
+          ? const SizedBox()
+          : Text(text),
       selected: selected,
       onSelected: onSelected,
       labelStyle: TextStyle(color: selected ? UColors.white : null),
+      avatar: isColor
+          ? UCircularContainer(
+              width: 50,
+              height: 50,
+              backgroundColor: UHelperFunctions.getColor(text)!)
+          : null,
+      shape: isColor ? const CircleBorder() : null,
+      labelPadding: isColor ? const EdgeInsets.all(0) : null,
+      padding: isColor ? const EdgeInsets.all(0) : null,
+      backgroundColor: isColor ? UHelperFunctions.getColor(text)! : null,
     );
   }
 }

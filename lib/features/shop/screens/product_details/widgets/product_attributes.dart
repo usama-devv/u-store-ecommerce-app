@@ -78,12 +78,37 @@ class UProductAttributes extends StatelessWidget {
         const SizedBox(height: USizes.spaceBtwItems),
 
         /// Attributes
-        const Column(
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            USectionHeading(title: 'Colors', showActionButton: false),
-            SizedBox(height: USizes.spaceBtwItems / 2),
+            const USectionHeading(title: 'Colors', showActionButton: false),
+            const SizedBox(height: USizes.spaceBtwItems / 2),
             /// Choice Chip
-            UChoiceChip(),
+            Wrap(
+              spacing: 8,
+              children: [
+                UChoiceChip(text: 'Green', selected: false, onSelected: (value){}),
+                UChoiceChip(text: 'Blue', selected: false, onSelected: (value){}),
+                UChoiceChip(text: 'Purple', selected: true, onSelected: (value){}),
+              ],
+            ),
+          ],
+        ),
+        /// Sizes
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const USectionHeading(title: 'Sizes', showActionButton: false),
+            const SizedBox(height: USizes.spaceBtwItems / 2),
+            /// Choice Chip
+            Wrap(
+              spacing: 8,
+              children: [
+                UChoiceChip(text: 'EU-34', selected: false, onSelected: (value){}),
+                UChoiceChip(text: 'EU-36', selected: false, onSelected: (value){}),
+                UChoiceChip(text: 'EU-38', selected: true, onSelected: (value){}),
+              ],
+            ),
           ],
         ),
       ],
