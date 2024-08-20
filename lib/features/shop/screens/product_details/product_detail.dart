@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:u_store/features/shop/screens/product_details/widgets/product_attributes.dart';
 import 'package:u_store/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:u_store/utils/constants/sizes.dart';
 import 'package:u_store/utils/helpers/helper_functions.dart';
@@ -34,6 +35,7 @@ class ProductDetailScreen extends StatelessWidget {
                   /// Price, Title, Stock, Brand
                   UProductMetaData(),
                   /// Attributes
+                  UProductAttributes(),
                   /// Checkout Button
                   /// Description
                   /// Reviews
