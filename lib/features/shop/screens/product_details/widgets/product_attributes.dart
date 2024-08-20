@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:u_store/common/widgets/chips/choice_chip.dart';
 import 'package:u_store/common/widgets/custom_shapes/containers/rounded_container.dart';
+import 'package:u_store/common/widgets/texts/product_price_text.dart';
+import 'package:u_store/common/widgets/texts/product_title_text.dart';
 import 'package:u_store/common/widgets/texts/section_heading.dart';
 import 'package:u_store/utils/constants/colors.dart';
 import 'package:u_store/utils/constants/sizes.dart';
@@ -15,21 +18,77 @@ class UProductAttributes extends StatelessWidget {
       children: [
         /// Selected Attribute Pricing and Description
         URoundedContainer(
+          padding: const EdgeInsets.all(USizes.md),
           backgroundColor: dark ? UColors.darkerGrey : UColors.grey,
-          child: const Column(
+          child: Column(
             children: [
               /// Title, Price and Stock Status
               Row(
                 children: [
-                  USectionHeading(title: 'Variations', showActionButton: false),
-                  SizedBox(width: USizes.spaceBtwItems),
+                  const USectionHeading(
+                      title: 'Variations', showActionButton: false),
+                  const SizedBox(width: USizes.spaceBtwItems),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          const UProductTitleText(
+                              title: 'Price : ', smallSize: true),
+
+                          /// Actual Price
+                          Text(
+                            '\$250',
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleSmall!
+                                .apply(decoration: TextDecoration.lineThrough),
+                          ),
+                          const SizedBox(width: USizes.spaceBtwItems),
+
+                          /// Sale Price
+                          const UProductPriceText(price: '175'),
+                        ],
+                      ),
+
+                      /// Stock
+                      Row(
+                        children: [
+                          const UProductTitleText(
+                              title: 'Stock : ', smallSize: true),
+                          Text('In Stock',
+                              style: Theme.of(context).textTheme.titleMedium),
+                        ],
+                      ),
+                    ],
+                  ),
                 ],
               ),
+
               /// Variation Description
+              const UProductTitleText(
+                title:
+                    'This is the description of the product and it can go up to max 4 lines',
+                smallSize: true,
+                maxLines: 4,
+              ),
             ],
           ),
+        ),
+        const SizedBox(height: USizes.spaceBtwItems),
+
+        /// Attributes
+        const Column(
+          children: [
+            USectionHeading(title: 'Colors', showActionButton: false),
+            SizedBox(height: USizes.spaceBtwItems / 2),
+            /// Choice Chip
+            UChoiceChip(),
+          ],
         ),
       ],
     );
   }
 }
+
+

@@ -5,13 +5,13 @@ class UProductTitleText extends StatelessWidget {
     super.key,
     required this.title,
     this.smallSize = false,
-    this.mazLines = 2,
+    this.maxLines = 2,
     this.textAlign = TextAlign.left,
   });
 
   final String title;
   final bool smallSize;
-  final int mazLines;
+  final int maxLines;
   final TextAlign? textAlign;
 
   @override
@@ -20,7 +20,7 @@ class UProductTitleText extends StatelessWidget {
       title,
       style: smallSize ? Theme.of(context).textTheme.labelLarge : Theme.of(context).textTheme.titleSmall,
       overflow: TextOverflow.ellipsis,
-      maxLines: mazLines,
+      maxLines: maxLines,
       textAlign: textAlign,
     );
   }
