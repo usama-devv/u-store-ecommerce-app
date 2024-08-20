@@ -4,9 +4,9 @@ import 'package:u_store/common/widgets/custom_shapes/curved_edges/curved_edges.d
 class UCurvedEdgesWidget extends StatelessWidget {
   const UCurvedEdgesWidget({
     super.key,
-    this.child,
+    required this.child,
   });
-  final Widget? child;
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
