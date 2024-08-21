@@ -128,4 +128,9 @@ class UImages{
 
   /// Profile
   static const String user = "assets/images/user/user.png";
+
+  /// User Profile Images -- Product Reviews
+  static const String userProfile1 = "assets/images/reviews/review_profile_image_1.jpg";
+  static const String userProfile2 = "assets/images/reviews/review_profile_image_2.jpeg";
+  static const String userProfile3 = "assets/images/reviews/review_profile_image_3.jpeg";
 }

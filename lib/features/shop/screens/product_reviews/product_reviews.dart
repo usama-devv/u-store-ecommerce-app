@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:u_store/common/widgets/appbar/appbar.dart';
+import 'package:u_store/common/widgets/products/ratings/rating_indicator.dart';
+import 'package:u_store/features/shop/screens/product_reviews/widgets/user_review_card.dart';
 import 'package:u_store/utils/constants/sizes.dart';
 
-import 'widgets/progress_indicator_and_rating.dart';
+import 'widgets/rating_progress_indicator.dart';
 
 class ProductReviewsScreen extends StatelessWidget {
   const ProductReviewsScreen({super.key});
@@ -28,26 +30,15 @@ class ProductReviewsScreen extends StatelessWidget {
               const SizedBox(height: USizes.spaceBtwItems),
 
               /// Overall Product Ratings
-              Row(
-                children: [
-                  Expanded(
-                      flex: 3,
-                      child: Text('4.9',
-                          style: Theme.of(context).textTheme.displayLarge)),
-                  const Expanded(
-                    flex: 7,
-                    child: Column(
-                      children: [
-                        URatingProgressIndicator(text: '5', value: 1.0),
-                        URatingProgressIndicator(text: '4', value: 0.8),
-                        URatingProgressIndicator(text: '3', value: 0.6),
-                        URatingProgressIndicator(text: '2', value: 0.4),
-                        URatingProgressIndicator(text: '1', value: 0.2),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+              const UOverallProductRating(),
+              const URatingBarIndicator(rating: 3.9),
+              Text('10,365', style: Theme.of(context).textTheme.bodySmall),
+              const SizedBox(height: USizes.spaceBtwSections),
+
+              /// User Reviews List
+              const UserReviewCard(),
+              const UserReviewCard(),
+              const UserReviewCard(),
             ],
           ),
         ),
@@ -55,3 +46,5 @@ class ProductReviewsScreen extends StatelessWidget {
     );
   }
 }
+
+
