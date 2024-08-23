@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:u_store/common/widgets/appbar/appbar.dart';
 import 'package:u_store/common/widgets/appbar/tabbar.dart';
 import 'package:u_store/common/widgets/brands/u_brand_card.dart';
@@ -6,6 +7,7 @@ import 'package:u_store/common/widgets/custom_shapes/containers/search_container
 import 'package:u_store/common/widgets/layout/grid_layout.dart';
 import 'package:u_store/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:u_store/common/widgets/texts/section_heading.dart';
+import 'package:u_store/features/shop/screens/brands/all_brands.dart';
 import 'package:u_store/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:u_store/utils/constants/colors.dart';
 import 'package:u_store/utils/constants/sizes.dart';
@@ -55,7 +57,7 @@ class StoreScreen extends StatelessWidget {
 
                       /// Featured Brands
                       USectionHeading(
-                          title: 'Featured Brand', onPressed: () {}),
+                          title: 'Featured Brand', onPressed: () => Get.to(() => const AllBrandsScreen())),
                       const SizedBox(height: USizes.spaceBtwItems / 1.5),
 
                       /// Brand Card
