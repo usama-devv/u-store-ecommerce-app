@@ -8,6 +8,7 @@ import 'package:u_store/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:u_store/common/widgets/texts/section_heading.dart';
 import 'package:u_store/features/personalization/screens/address/address_screen.dart';
 import 'package:u_store/features/personalization/screens/profile/profile_screen.dart';
+import 'package:u_store/features/shop/screens/order/order_screen.dart';
 import 'package:u_store/utils/constants/colors.dart';
 import 'package:u_store/utils/constants/sizes.dart';
 
@@ -70,7 +71,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.bag_tick,
                     title: 'My Orders',
                     subTitle: 'In-progress and completed orders',
-                    onTap: () {},
+                    onTap: () => Get.to(() => const OrderScreen()),
                   ),
                   USettingsMenuTile(
                     icon: Iconsax.bank,
