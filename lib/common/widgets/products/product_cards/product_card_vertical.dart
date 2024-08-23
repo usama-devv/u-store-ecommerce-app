@@ -76,16 +76,20 @@ class UProductCardVertical extends StatelessWidget {
             const SizedBox(height: USizes.spaceBtwItems / 2),
 
             /// Details
-            const Padding(
-              padding: EdgeInsets.only(left: USizes.sm),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  UProductTitleText(title: 'Acer Laptop', smallSize: true),
-                  SizedBox(height: USizes.spaceBtwItems / 2),
-                  UBrandTitleWithVerificationIcon(title: 'Acer'),
-                ],
-              ),
+            const Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: USizes.sm),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      UProductTitleText(title: 'Acer Laptop', smallSize: true),
+                      SizedBox(height: USizes.spaceBtwItems / 2),
+                      UBrandTitleWithVerificationIcon(title: 'Acer'),
+                    ],
+                  ),
+                ),
+              ],
             ),
             const Spacer(),
             Row(

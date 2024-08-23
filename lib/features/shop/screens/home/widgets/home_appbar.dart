@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:u_store/common/widgets/appbar/appbar.dart';
 import 'package:u_store/common/widgets/products/cart/cart_menu_icon.dart';
+import 'package:u_store/features/shop/screens/cart/cart_screen.dart';
 import 'package:u_store/utils/constants/colors.dart';
 import 'package:u_store/utils/constants/text_strings.dart';
 
@@ -28,7 +30,7 @@ class UHomeAppBar extends StatelessWidget {
         ],
       ),
       actions: [
-        UCartCounterIcon(onPressed: () {}, iconColor: UColors.white,)
+        UCartCounterIcon(onPressed: () => Get.to(() => const CartScreen()), iconColor: UColors.white,)
       ],
     );
   }
