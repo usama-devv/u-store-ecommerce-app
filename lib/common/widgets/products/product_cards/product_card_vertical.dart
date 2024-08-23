@@ -100,6 +100,8 @@ class UProductCardVertical extends StatelessWidget {
                   padding: EdgeInsets.only(left: USizes.sm),
                   child: UProductPriceText(price: '130',),
                 ),
+
+                /// Add to Cart Button
                 Container(
                   decoration: const BoxDecoration(
                     color: UColors.dark,

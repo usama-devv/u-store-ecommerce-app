@@ -4,7 +4,10 @@ import 'package:u_store/utils/device/device_utility.dart';
 import 'package:u_store/utils/helpers/helper_functions.dart';
 
 class UTabBar extends StatelessWidget implements PreferredSizeWidget {
-  const UTabBar({super.key, required this.tabs});
+  const UTabBar({
+    super.key,
+    required this.tabs,
+  });
   final List<Widget> tabs;
 
   @override

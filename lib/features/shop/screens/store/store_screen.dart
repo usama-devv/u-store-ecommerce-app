@@ -64,7 +64,7 @@ class StoreScreen extends StatelessWidget {
                         mainAxisExtent: 80,
                         itemBuilder: (_, index) {
                           return const UBrandCard(
-                            showBorder: false,
+                            showBorder: true,
                           );
                         },
                       ),
@@ -74,6 +74,7 @@ class StoreScreen extends StatelessWidget {
 
                 /// Tab Bar
                 bottom: const UTabBar(
+
                   tabs: [
                     Tab(child: Text('Sports')),
                     Tab(child: Text('Furniture')),
