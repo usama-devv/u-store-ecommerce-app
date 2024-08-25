@@ -12,7 +12,20 @@
           "package_name": "com.ustore.app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "804670300683-8f30lgig37teslkt7hsj1f4va8kjppk2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ustore.app",
+            "certificate_hash": "8ce530cb6b2b4f808276efabafeb317fdf05d6d8"
+          }
+        },
+        {
+          "client_id": "804670300683-koo55ho0ts9qrsvevepb6saq4k32f2gn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDTPV2EVdZTEpX_Ra-eP2iKfbzc7mch7G0"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804670300683-koo55ho0ts9qrsvevepb6saq4k32f2gn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "804670300683-u1g0sbbml5p4am9uhtnjb4bj1k1a9o7p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.uStoreEcommerceApp"
+              }
+            }
+          ]
         }
       }
     }

@@ -70,6 +70,9 @@ class DefaultFirebaseOptions {
     messagingSenderId: '804670300683',
     projectId: 'u-store-f8b25',
     storageBucket: 'u-store-f8b25.appspot.com',
+    androidClientId: '804670300683-8f30lgig37teslkt7hsj1f4va8kjppk2.apps.googleusercontent.com',
+    iosClientId: '804670300683-u1g0sbbml5p4am9uhtnjb4bj1k1a9o7p.apps.googleusercontent.com',
     iosBundleId: 'com.example.uStoreEcommerceApp',
   );
+
 }
