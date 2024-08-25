@@ -1,16 +1,21 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:u_store/firebase_options.dart';
 import 'app.dart';
 
-
-void main() {
 
   /// Todo: Add widgets Binding
   /// Todo: Init Local Storage
   /// Todo: Await Native Splash
   /// Todo: Initialize Firebase
+Future<void> main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform).then((FirebaseApp value) => Get.put(AythenticationRepository()),
+  );
+
+  /// Todo: Initialize Authentication
   /// Todo: Initialize Authentication
 
   runApp(const App());
 }
-
-

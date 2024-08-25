@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "804670300683",
+    "project_id": "u-store-f8b25",
+    "storage_bucket": "u-store-f8b25.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804670300683:android:06755f480bbb0b53e8dd0e",
+        "android_client_info": {
+          "package_name": "com.ustore.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTPV2EVdZTEpX_Ra-eP2iKfbzc7mch7G0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
