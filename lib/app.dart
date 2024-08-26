@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:u_store/utils/constants/colors.dart';
 import 'features/authentication/screens/onboarding/onboarding.dart';
 import 'utils/theme/theme.dart';
 
@@ -12,10 +13,16 @@ class App extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      themeMode:ThemeMode.system,
+      themeMode: ThemeMode.system,
       theme: UAppTheme.lightTheme,
       darkTheme: UAppTheme.darkTheme,
-      home: const OnboardingScreen(),
+      /// Show Loader or Circular Progress Indicator meanwhile authentication repository is deciding to show relevant screen
+      home: const Scaffold(
+        backgroundColor: UColors.primary,
+        body: Center(
+          child: CircularProgressIndicator(color: UColors.white),
+        ),
+      ),
     );
   }
 }
