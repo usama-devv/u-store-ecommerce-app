@@ -18,28 +18,21 @@ class UTandCCheckbox extends StatelessWidget {
             child: Checkbox(value: true, onChanged: (value) {})),
         const SizedBox(width: USizes.spaceBtwItems),
         Text.rich(
-          TextSpan(children: [
-            TextSpan(
-                text: '${UTextStrings.iAgreeTo} ',
-                style: Theme.of(context).textTheme.bodySmall),
-            TextSpan(
-                text: '${UTextStrings.privacyPolicy} ',
-                style: Theme.of(context).textTheme.bodyMedium!.apply(
-                  color: dark ? UColors.white : UColors.primary,
-                  decoration: TextDecoration.underline,
-                  decorationColor: dark ? UColors.white : UColors.primary,
-                )),
-            TextSpan(
-                text: '${UTextStrings.and} ',
-                style: Theme.of(context).textTheme.bodySmall),
-            TextSpan(
+          TextSpan(
+            children: [
+              TextSpan(
+                  text: '${UTextStrings.iAgreeTo} ',
+                  style: Theme.of(context).textTheme.bodySmall),
+              TextSpan(
                 text: '${UTextStrings.termsOfUse} ',
                 style: Theme.of(context).textTheme.bodyMedium!.apply(
-                  color: dark ? UColors.white : UColors.primary,
-                  decoration: TextDecoration.underline,
-                  decorationColor: dark ? UColors.white : UColors.primary,
-                )),
-          ]),
+                      color: dark ? UColors.white : UColors.primary,
+                      decoration: TextDecoration.underline,
+                      decorationColor: dark ? UColors.white : UColors.primary,
+                    ),
+              ),
+            ],
+          ),
         ),
       ],
     );
