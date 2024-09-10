@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: dark ? UColors.black : UColors.white,
       body: Center(
         child: Image.asset(
-          dark ? UImages.darkAppLogo : UImages.lightAppLogo,
+          dark ? UImages.lightAppLogo : UImages.darkAppLogo,
           width: 300,
           height: 300,
         ),

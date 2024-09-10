@@ -2,8 +2,8 @@
 class UImages{
 
   /// App Logos
-  static const String darkAppLogo = "assets/logos/u-store-splash-screen-logo-white.png";
-  static const String lightAppLogo = "assets/logos/u-store-splash-screen-logo-black.png";
+  static const String lightAppLogo = "assets/logos/u-store-splash-screen-logo-white.png";
+  static const String darkAppLogo = "assets/logos/u-store-splash-screen-logo-black.png";
 
   /// Social Logos
   static const String google = "assets/logos/social_logo/google.png";
