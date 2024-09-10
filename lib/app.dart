@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'features/authentication/screens/onboarding/onboarding.dart';
+import 'package:u_store/features/authentication/screens/splash_screen/splash_screen.dart';
 import 'utils/theme/theme.dart';
 
 class App extends StatelessWidget {
@@ -11,11 +11,11 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'U Store',
       themeMode: ThemeMode.system,
       theme: UAppTheme.lightTheme,
       darkTheme: UAppTheme.darkTheme,
-      home: const OnboardingScreen(),
+      home: const SplashScreen(),
     );
   }
 }
